@@ -1,0 +1,59 @@
+<ion-content fullscreen="true" class="ion-padding">
+  <ion-list lines="none">
+      
+      <ion-item>
+        <ion-img class="img-center" src="/assets/img/logo.jpg"></ion-img>
+      </ion-item>
+    <ion-item>
+      <ion-label class="ion-padding-top" class="label-center">FutbolInn</ion-label>
+    </ion-item>
+    <ion-item class="ion-padding-top">
+      <small>Bienvenido, por favor inicie sesion</small>
+    </ion-item>
+    <form [formGroup]="formularioLogin" (ngSubmit)="login()">
+      <ion-item>
+        <ion-icon slot="start" class="icono" name="mail"></ion-icon>
+        <ion-label position="stacked" class="formLabel">Correo</ion-label>
+        <ion-input type="text" placeholder="ejemplo@ejempli.com" formControlName="correo"></ion-input>
+      </ion-item>
+      <div class="">
+        <small *ngIf="errorCorreo">Ingrese un correo valido</small>
+      </div>
+      <ion-item>
+        <ion-icon slot="start" class="icono" name="lock-closed"></ion-icon>
+        <ion-label position="stacked" class="formLabel">Contraseña</ion-label>
+        <ion-input type="password" placeholder="•••••••••• " formControlName="passw"></ion-input>
+      </ion-item>
+      <small *ngIf="errorPassw">El campo es obligatorio</small>
+      <ion-item>
+        <ion-label>Recordarme</ion-label>
+        <ion-checkbox slot="start"></ion-checkbox>
+        
+      </ion-item>
+
+      <ion-button type="submit"  class="login" expand="full" fill="solid" shape="round">
+        Acceder
+      </ion-button>
+    </form>
+    <ion-item>
+      <ion-label class="passwForgot">¿Olvido su contraseña?</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="small" >o inicia sesion con</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-button class="logo-f"  expand="full" size="large">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Facebook
+      </ion-button>
+      <ion-button class="logo-t" expand="full" size="large">
+        <ion-icon slot="start" name="logo-twitter"></ion-icon>
+        twitter
+      </ion-button>
+    </ion-item>
+    <ion-item class="ion-padding-top">
+      <ion-label class="rojo" routerLink="/register">¿Crear una cuenta?</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

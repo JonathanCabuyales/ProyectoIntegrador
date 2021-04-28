@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="light">
+    
+    <ion-avatar slot="start">
+      <img src="https://via.placeholder.com/75" />
+    </ion-avatar>
+    <ion-label class="ion-padding-start titulo-nombre">Nombre</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-no-padding ion-no-margin">
+  <!-- <ion-slides>
+    <ion-slide>
+      adsadas
+    </ion-slide>
+  </ion-slides> -->
+  <ion-list>
+    <ion-item>
+      <ion-textarea readonly disabled rows="26"></ion-textarea>
+      
+    </ion-item>
+  </ion-list>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="10">
+        <ion-item>
+          <ion-input type="text" placeholder="Awesome Input"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        
+        <ion-button>
+          <ion-icon slot="icon-only" name="send"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

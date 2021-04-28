@@ -1,0 +1,28 @@
+<!-- <ion-header>
+  <ion-toolbar color="light">
+    <ion-title>tabsLocal</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content color="light">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="showReservasModal()">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <ion-label>Reservas activas</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="showReservasModalReservar()">
+        <ion-icon name="book-outline"></ion-icon>
+        <ion-label>Reservar</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="showReservasModalComentarios()">
+        <ion-icon name="laptop-outline"></ion-icon>
+        <ion-label>Comentarios</ion-label>
+      </ion-tab-button>
+      <ion-tab-button  (click)="showReservasModalMensaje()">
+        <ion-icon name="send-outline"></ion-icon>
+        <ion-label>Mensaje</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

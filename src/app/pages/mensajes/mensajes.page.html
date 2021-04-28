@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons *ngIf="!modalMensaje" slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Mensajes</ion-title>
+    <ion-buttons *ngIf="modalMensaje" slot="end">
+      <ion-button (click)="cerrarModal()" color="danger">
+        <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list>
+    <ion-item>
+      <ion-searchbar placeholder="Filter Pizza" inputmode="text" type="text" [debounce]="250" showCancelButton="focus"></ion-searchbar>
+    </ion-item>
+  
+    <ion-item detail *ngFor="let item of [1,1,1,1,1]" (click)="abrirMensaje()">
+      <ion-avatar slot="start">
+        <img src="https://via.placeholder.com/75" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Nombre propietario</h2>
+        <p>establecimiento</p>
+        
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+  <ion-button (click)="showMensaje()" expand="block" fill="clear" shape="round">
+    Abrir mensaje
+  </ion-button>
+</ion-content>

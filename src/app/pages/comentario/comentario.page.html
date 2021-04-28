@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons *ngIf="!modalComentario" slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Comentarios</ion-title>
+    <ion-buttons *ngIf="modalComentario" slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon slot="icon-only" name="close-circle-outline" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-sm="6" size-md="6">
+        <ion-item>
+          <ion-datetime display-format="DDD MM, YYYY" placeholder="Seleccione una fecha"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-sm="6" size-md="6">
+        <ion-item>
+          <ion-label>Pizza</ion-label>
+          <ion-select value="peperoni" placeholder="Select Pizza">
+            <ion-select-option value="peperoni">Peperoni</ion-select-option>
+            <ion-select-option value="hawaii">Hawaii</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item detail *ngFor="let item of [1,1,1,1,1]">
+    <ion-thumbnail slot="start">
+      <img src="https://via.placeholder.com/75" />
+    </ion-thumbnail>
+    <ion-label>
+      <h2>Nombre establecimiento</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati et fugit architecto, rem repudiandae tenetur. Nemo corrupti, modi nesciunt veritatis, voluptates soluta fugit ipsam magni a vel, dolorem necessitatibus?</p>
+    </ion-label>
+  </ion-item>
+  
+  <ion-button (click)="abrirComentarios()" expand="block" fill="clear" shape="round">
+    abrir comentario
+  </ion-button>
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Realizar reserva</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModalReservar()">
+        <ion-icon slot="icon-only" name="close-circle-outline" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-img src="https://via.placeholder.com/150x50"></ion-img>
+
+  <ion-item>
+    <ion-label>Persona a reservas</ion-label>
+    <ion-label>Jonathan Cabuyales</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Cedula</ion-label>
+    <ion-label>1750068585</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Lugar</ion-label>
+    <ion-label>Prueba</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Dia</ion-label>
+    <ion-datetime placeholder="Seleccione una fecha" display-format="DDD MM, YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Hora</ion-label>
+    <ion-select value="peperoni" placeholder="Select Pizza">
+      <ion-select-option value="peperoni">Peperoni</ion-select-option>
+      <ion-select-option value="hawaii">Hawaii</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Propietario</ion-label>
+    <ion-label>Prueba</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Cantidad</ion-label>
+    <ion-select value="peperoni" placeholder="Select Pizza">
+      <ion-select-option value="peperoni">Peperoni</ion-select-option>
+      <ion-select-option value="hawaii">Hawaii</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Observaciones (opcional)</ion-label>
+      <ion-textarea placeholder="Observaciones"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="full" shape="round">
+    Reservar
+  </ion-button>
+  <ion-button color="danger" expand="block" shape="round">
+    Cancelar
+  </ion-button>
+  
+
+</ion-content>

@@ -1,0 +1,27 @@
+#map {
+    height: 99% !important;
+    width: 100% !important;
+    background-color: #f6f6f4;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+#maps > a{
+    cursor: pointer;
+}
+
+*{
+    display: flex;
+}
+
+small{
+    
+    flex-direction: column;
+}
+
+.ocultar{
+    display: none !important;
+}

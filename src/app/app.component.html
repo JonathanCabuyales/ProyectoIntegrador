@@ -1,0 +1,28 @@
+<ion-app>
+  <ion-menu [disabled]="ocultarMenu" contentId="menuMovil" menuId="first" side="start" type="push" >
+    <ion-header>
+      <ion-toolbar>
+        <ion-avatar class="ion-padding img-center">
+          <img  src="/assets/img/user.jpg" />
+        </ion-avatar>
+        <ion-label class="nombre">Nombre</ion-label>
+        <ion-label class="correo">Correo</ion-label>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content  color="light">
+        <ion-menu-toggle menu="first" *ngFor="let menu of menuOpt" autoHide="false">
+          <ion-item detail   color="light" [routerLink]="menu.redirecTo" >
+            <ion-icon slot="start" color="primary" [name]="menu.icon"></ion-icon>
+            <ion-label>{{ menu.name }}</ion-label>
+          </ion-item>
+          
+        </ion-menu-toggle>
+        <!-- <ion-item color="light" class="bottom-profile" detail routerLink="/home">
+          <ion-icon slot="start" color="primary" name="person-circle-outline"></ion-icon>
+          <ion-label>Perfil</ion-label>
+          
+        </ion-item> -->
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menuMovil"></ion-router-outlet>
+</ion-app>

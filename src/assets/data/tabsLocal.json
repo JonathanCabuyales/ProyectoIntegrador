@@ -1,0 +1,23 @@
+[
+    {
+        "tab"     : "showReservasModal()",
+        "iconName": "calendar-outline",
+        "nombre"  : "Reservas activas"
+    },
+    {
+        "tab"     : "showReservasModalReservar()",
+        "iconName": "book-outline",
+        "nombre"  : "Reservar"
+    },
+    {
+        "tab"     : "showReservasModalComentarios()",
+        "iconName": "laptop-outline",
+        "nombre"  : "Comentarios"
+    },
+    {
+        "tab"     : "showReservasModalMensaje()",
+        "iconName": "send-outline",
+        "nombre"  : "Mensaje"
+    }
+
+]

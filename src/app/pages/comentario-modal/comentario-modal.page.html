@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Enviar comentario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon slot="icon-only" name="close-circle-outline" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-item>
+    <ion-label>Establecimiento</ion-label>
+    <ion-label>asdasdadas</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Calificación</ion-label>
+    <ion-label>
+      <ion-icon slot="end" name="star"></ion-icon>
+      <ion-icon slot="end" name="star"></ion-icon>
+      <ion-icon slot="end" name="star"></ion-icon>
+      <ion-icon slot="end" name="star"></ion-icon>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+
+    <ion-label position="floating">Comentario</ion-label>
+      <ion-textarea autoGrow="true" rows="7" enterkeyhint="done" inputmode="text" wrap="soft"></ion-textarea>
+  </ion-item>
+
+  <ion-item lines="none" >
+    <ion-button class="botones-enviar ion-padding-top ion-padding-bottom" >
+      Enviar comentario
+    </ion-button>
+    <ion-button class="botones-cancelar ion-padding-top ion-padding-bottom" color="danger">
+      
+      Cancelar
+    </ion-button>
+  </ion-item>
+  
+</ion-content>

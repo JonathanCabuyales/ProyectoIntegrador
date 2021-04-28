@@ -1,0 +1,28 @@
+<app-header titulo="Historial de reservas" [tabsModal]="modalInfo"></app-header>
+
+<ion-content color="light">
+  <ion-item>
+    <ion-datetime slot="start" display-format="MMM DD, YYYY" min="2020" max="2021-04-04" placeholder="Seleccione una fecha"></ion-datetime>
+    
+    <ion-select *ngIf="!modalInfo" slot="end" placeholder="Selecciona una cancha">
+      <ion-select-option value="peperoni">Peperoni</ion-select-option>
+      <ion-select-option value="hawaii">Hawaii</ion-select-option>
+    </ion-select>
+    
+
+  </ion-item>
+
+  <ion-list>
+    <ion-item detail *ngFor="let item of [1,1,1,1,1]">
+      <ion-thumbnail slot="start">
+        <img src="https://via.placeholder.com/75" />
+      </ion-thumbnail>
+      <ion-label>
+        <p>Nombre establecimiento</p>
+        <h2>ubicacion</h2>
+        <small>horario</small>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

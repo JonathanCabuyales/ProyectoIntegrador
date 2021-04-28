@@ -1,0 +1,13 @@
+.titulo-nombre{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-mensaje{
+   display: grid;
+   align-content: center; 
+}
+ion-textarea{
+    height: 89%;
+    overflow-y: scroll;
+}

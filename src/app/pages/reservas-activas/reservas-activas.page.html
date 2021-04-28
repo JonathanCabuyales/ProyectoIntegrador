@@ -1,0 +1,23 @@
+<app-header titulo="Reservas activas realizadas" [tabsModal]="modalInfo"></app-header>
+
+<ion-content color="light">
+  <ion-item>
+    <ion-label>Fecha: </ion-label>
+    <ion-datetime display-format="MMM DD, YYYY" min="2020" max="2021-04-04" placeholder="Seleccione una fecha"></ion-datetime>   
+
+  </ion-item>
+
+  <ion-list class="ion-padding-top">
+    <ion-item detail *ngFor="let item of [1,1,1,1,1]">
+      <ion-thumbnail slot="start">
+        <img src="https://via.placeholder.com/75" />
+      </ion-thumbnail>
+      <ion-label>
+        <p>Nombre establecimiento</p>
+        <h2>ubicacion</h2>
+        <small>horario</small>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

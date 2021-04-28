@@ -1,0 +1,43 @@
+.form-label{
+    color: var( --ion-color-tertiary);
+    font-size: 17px;
+}
+
+.register{
+    --background: var( --ion-color-tertiary);
+    text-transform: capitalize;
+    height: 40px;
+}
+
+.titulo{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.log-in{
+    text-align: center;
+    font-size: 15px;
+    color: grey;
+}
+
+.log-in a{
+    color: var(--ion-color-primary);
+}
+
+.terms{
+    font-size: 15px;
+    font-weight: 500;
+    color: var( --ion-color-secondary);
+    padding-top: 2px;
+}
+
+.validadorCorreo{
+    display: flex;
+    align-items: flex-start;
+    flex-direction:column ;
+    
+}
+
+ion-icon{
+    font-size: xx-large;
+}

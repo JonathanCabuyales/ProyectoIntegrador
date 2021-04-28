@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Ubicaciones</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="abrirSearch()">
+        <ion-icon slot="icon-only" [name]="searchAbrir ? 'close-circle-outline' : 'search-outline'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content  color="light" id="menuMovil">
+  <ion-item *ngIf="searchAbrir">
+    <ion-searchbar placeholder="Filter Pizza" inputmode="text" type="text" (ionChange)="onSearchChange($event)" [debounce]="250" showCancelButton="focus"></ion-searchbar>
+  </ion-item>
+  
+  <!-- <ion-button [routerLink]="['/tabs-local/informacion', uid]" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">
+    ir a informacion
+  </ion-button> -->
+  <ion-fab  vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="obtenerPosicion()" color="danger">
+      <ion-icon name="location-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div id="map"></div>
+  
+</ion-content>
+
+
+
+

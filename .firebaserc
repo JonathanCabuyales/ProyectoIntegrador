@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "futbolinn-e54fa": {
+      "hosting": {
+        "app": [
+          "futbolinn-e54fa"
+        ]
+      }
+    }
+  }
+}

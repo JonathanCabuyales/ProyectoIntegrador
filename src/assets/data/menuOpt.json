@@ -1,0 +1,27 @@
+[
+    {
+        "icon": "map",
+        "name": "Ubicaciones",
+        "redirecTo": "/tabs/ubicaciones"
+    },
+    {
+        "icon": "calendar",
+        "name": "Reservas",
+        "redirecTo": "/tabs/reservas-activas"
+    },
+    {
+        "icon": "mail",
+        "name": "Mensajes",
+        "redirecTo": "mensajes"
+    },
+    {
+        "icon": "file-tray-full",
+        "name": "Comentarios",
+        "redirecTo": "/comentario"
+    },
+    {
+        "icon":"person-circle-outline",
+        "name": "Perfil",
+        "redirecTo": "/tabs/perfil"
+    }
+]

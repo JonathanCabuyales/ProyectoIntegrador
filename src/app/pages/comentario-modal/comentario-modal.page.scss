@@ -1,0 +1,18 @@
+ion-button.botones-cancelar{
+
+    width: 49%;
+    float: right;
+}
+ion-button.botones-enviar{
+
+    width: 49%;
+    float: left;
+}
+
+.botones-enviar, .botones-cancelar{
+    width: 100%;
+    height: 75%;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}

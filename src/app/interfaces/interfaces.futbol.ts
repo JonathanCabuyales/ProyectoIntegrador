@@ -29,8 +29,7 @@ export interface Registro{
 
 export interface RespUbicaciones {
   ciudad: string;
-  horario?: Horario;
-  numCanchas: NumCanchas;
+  numCanchas: string;
   precio: string[] | string;
   id: string;
   ubicacion: string;
@@ -38,7 +37,7 @@ export interface RespUbicaciones {
   desc: string;
   redes: Rede | string;
   nomLocal: string;
-  otrosServicios: OtrosServicio | OtrosServicios2 | string;
+  otrosServicios: OtrosServicios | string;
   latLng: LatLng;
   pais: string;
   horarios?: Horarios;
@@ -46,8 +45,8 @@ export interface RespUbicaciones {
 }
 
 export interface Horarios {
-  horas: string[];
-  dias: string[];
+  semana: semana[];
+  finSemana: finSemana[];
 }
 
 export interface LatLng {
@@ -55,13 +54,10 @@ export interface LatLng {
   longitude: number;
 }
 
-export interface OtrosServicios2 {
+export interface OtrosServicios {
   resp: string;
-}
-
-export interface OtrosServicio {
-  servicios: string[];
-  resp: string;
+  verificacion:boolean;
+  servicios?: [];
 }
 
 export interface Rede {
@@ -71,15 +67,25 @@ export interface Rede {
 
 export interface Telf {
   celular: string[] | string;
-  conencional?: string;
   convencional?: string;
 }
 
-export interface NumCanchas {
+/* export interface NumCanchas {
   cubiertas?: Cubiertas;
   descubiertas?: Descubiertas;
+} */
+
+
+export interface semana{
+  dias: string[];
+  hora: string;
 }
 
+export interface finSemana{
+  dias: string[];
+  hora: string;
+}
+/* 
 export interface Descubiertas {
   num: string;
   tipo?: string;
@@ -90,10 +96,4 @@ export interface Cubiertas {
   num: string;
   tipo?: string;
   cubiertas?: string;
-}
-
-export interface Horario {
-  horas: string[];
-  dias?: string[];
-  dia?: string[];
-}
+} */

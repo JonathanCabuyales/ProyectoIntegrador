@@ -5,6 +5,7 @@ import { dataSlidesInterface, MenuOpt, RespUbicaciones } from '../interfaces/int
 //importaciones de firebase para obtener los datos
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/firestore";
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -22,15 +23,18 @@ export class FutbolInnService {
    }
 
    getSlides(){
-     return this._http.get<dataSlidesInterface[]>('/assets/data/dataSlides.json');
+    return this._http.get<dataSlidesInterface[]>('/assets/data/dataSlides.json');
    }
 
    getMenuOpt(){
-     return this._http.get<MenuOpt[]>('/assets/data/menuOpt.json');
+    return this._http.get<MenuOpt[]>('/assets/data/menuOpt.json');
    }
 
    getUbiaciones(){
-     return this._afs.collection<RespUbicaciones>('ubicaciones');
+    return this._afs.collection<RespUbicaciones>('ubicaciones');
      
+   }
+   getEstablecimientobyId( id:string ){
+    return this._afs.collection<RespUbicaciones>('ubicaciones', ref => ref.where('id', '==', id));
    }
 }

@@ -21,6 +21,7 @@ import { environment } from 'src/environments/environment';
 
 //uso de storage
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,7 +35,6 @@ import { IonicStorageModule } from '@ionic/storage-angular';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp( environment.firebaseConfig ),
-    
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
